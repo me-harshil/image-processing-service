@@ -1,11 +1,20 @@
 import express from 'express';
+import connectDB from '@/server';
+import config from '@/config/config';
+import { logger } from '@/config/logger';
+
 const app = express();
-const port = 3000;
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
-});
+const startServer = async () => {
+  await connectDB();
+
+  app.listen(config.PORT, () => {
+    logger.info(`Server started at http://localhost:${config.PORT}`);
+  })
+}
+
+startServer();
