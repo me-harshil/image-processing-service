@@ -34,3 +34,5 @@
 {"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
 {"level":"info","message":"Database connected","service":"user-service"}
 {"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
