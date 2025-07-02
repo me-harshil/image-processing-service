@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node -r tsconfig-paths/register dist/app.js",
     "lint": "eslint . --ext .ts",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "semantic-release": "semantic-release"
   },
   "keywords": [],
   "author": "",
@@ -23,9 +24,13 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.3",
     "eslint": "^9.30.1",
     "globals": "^16.3.0",
     "nodemon": "^3.1.10",
+    "semantic-release": "^24.2.6",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3",
