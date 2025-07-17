@@ -8,8 +8,9 @@ const signupController = catchAsync(async (req: Request, res: Response) => {
     logger.info("Started executing signupController");
     const { username, password } = req.body;
     const response = await authService.signupService({ username, password });
-    res.status(200).json(response);
     logger.info("Successfully executed signupController");
+    res.cookie('jwt', response.token);
+    return res.status(200).json(response);
 })
 
 export default signupController;

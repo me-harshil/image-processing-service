@@ -170,3 +170,85 @@
 {"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
 {"level":"info","message":"Started executing loginController","service":"user-service"}
 {"level":"info","message":"Started executing loginController","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Started executing loginController","service":"user-service"}
+{"level":"info","message":"Started executing loginController","service":"user-service"}
+{"level":"info","message":"Successfully executed loginController","service":"user-service"}
+{"level":"info","message":"Started executing checkAuth middleware","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Started executing checkAuth middleware","service":"user-service"}
+{"level":"error","message":"You are not logged in! Please log in to get access.","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Started executing loginController","service":"user-service"}
+{"level":"info","message":"Successfully executed loginController","service":"user-service"}
+{"level":"info","message":"Started executing checkAuth middleware","service":"user-service"}
+{"level":"error","message":"You are not logged in! Please log in to get access.","service":"user-service"}
+{"level":"info","message":"Started executing checkAuth middleware","service":"user-service"}
+{"level":"error","message":"You are not logged in! Please log in to get access.","service":"user-service"}
+{"level":"info","message":"Started executing checkAuth middleware","service":"user-service"}
+{"level":"error","message":"You are not logged in! Please log in to get access.","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Started executing checkAuth middleware","service":"user-service"}
+{"level":"error","message":"You are not logged in! Please log in to get access.","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Started executing loginController","service":"user-service"}
+{"level":"info","message":"Successfully executed loginController","service":"user-service"}
+{"level":"info","message":"Started executing checkAuth middleware","service":"user-service"}
+{"level":"error","message":"You are not logged in! Please log in to get access.","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Started executing loginController","service":"user-service"}
+{"level":"info","message":"Successfully executed loginController","service":"user-service"}
+{"level":"info","message":"Started executing checkAuth middleware","service":"user-service"}
+{"level":"info","message":"Successfully executed checkAuth middleware","service":"user-service"}
+{"level":"info","message":"Started executing uploadImageController","service":"user-service"}
+{"level":"info","message":"Started executing imageUploadService","service":"user-service"}
+{"level":"info","message":"Successfully executed imageUploadService","service":"user-service"}
+{"level":"info","message":"Successfully executed uploadImageController","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Started executing checkAuth middleware","service":"user-service"}
+{"level":"info","message":"Successfully executed checkAuth middleware","service":"user-service"}
+{"level":"info","message":"Started executing uploadImageController","service":"user-service"}
+{"level":"info","message":"Started executing imageUploadService","service":"user-service"}
+{"level":"info","message":"Successfully executed imageUploadService","service":"user-service"}
+{"level":"info","message":"Successfully executed uploadImageController","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}
+{"level":"info","message":"Database connected","service":"user-service"}
+{"level":"info","message":"Server started at http://localhost:3000","service":"user-service"}

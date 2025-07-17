@@ -7,12 +7,21 @@ import * as swaggerUi from "swagger-ui-express";
 import swaggerDocument from "./swagger-output.json";
 import AppError from '@/utils/appError';
 import multer from 'multer';
-import globalErrorHandler from '@/middleware/errorHandler';
+import globalErrorHandler from '@/middleware/errorHandler.middleware';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
 
 const app = express();
 app.use(multer().any())
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: '16kb' }));
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: true, limit: '16kb' }));
+app.use(cors({
+  origin: '*',
+  credentials: true
+}));
+app.use(express.static('public'));
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.get('/', (req, res) => {

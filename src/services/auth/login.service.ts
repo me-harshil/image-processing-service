@@ -1,6 +1,5 @@
-import User from "@/models/User";
+import User from "@/models/user.model";
 import AppError from "@/utils/appError";
-import bcrypt from "bcryptjs";
 import jwt, { SignOptions } from "jsonwebtoken";
 import config from "@/config/config";
 
@@ -12,7 +11,7 @@ const loginService = async ({ username, password }: User) => {
         throw new AppError("username or password is incorrect", 401);
     }
 
-    const isPasswordCorrect = await bcrypt.compare(password, user.password);
+    const isPasswordCorrect = await user.isPasswordCorrect(password);
     if (!isPasswordCorrect) {
         throw new AppError("username or password is incorrect", 401);
     }

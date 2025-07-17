@@ -1,5 +1,5 @@
 import loginService from "./login.service";
-import signupService from "./signUp.service";
+import signupService from "./signup.service";
 
 export default {
     loginService,

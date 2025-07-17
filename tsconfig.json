@@ -13,14 +13,21 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
+    "noImplicitAny": false,
     "outDir": "./dist",
     "rootDir": "./src",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": [
+        "src/*"
+      ]
     },
-    "types": ["node"],
-    "lib": ["ES2022"],
+    "types": [
+      "node"
+    ],
+    "lib": [
+      "ES2022"
+    ],
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmitOnError": true,
@@ -30,7 +37,8 @@
     "exactOptionalPropertyTypes": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "strictNullChecks": true
   },
   "include": [
     "src/**/*"

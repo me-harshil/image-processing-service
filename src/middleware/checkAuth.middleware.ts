@@ -3,7 +3,7 @@ import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import AppError from "@/utils/appError";
 import config from "@/config/config";
-import User from "@/models/User";
+import User from "@/models/user.model";
 import { logger } from "@/config/logger";
 import { promisify } from "util";
 
@@ -15,7 +15,7 @@ const checkAuth = catchAsync(async (req: Request, _res: Response, next: NextFunc
         req.headers.authorization.startsWith('Bearer')
     ) {
         token = req.headers.authorization.split(' ')[1];
-    } else if (req.cookies.jwt) {
+    } else if (req.cookies?.jwt) {
         token = req.cookies.jwt;
     }
 
@@ -28,10 +28,10 @@ const checkAuth = catchAsync(async (req: Request, _res: Response, next: NextFunc
     const decoded = await verifyAsync(token, config.JWT_SECRET_KEY);
     const currentUser = await User.findById(decoded.id);
     if (!currentUser) {
-        logger.error("The user belonging to this token does no longer exist");
+        logger.error("The user belodsfnging to this token does no longer exist");
         return next(new AppError("The user belonging to this token does no longer exist.", 401));
     }
-    req.user = currentUser;
+    // req.user = currentUser;
     logger.info("Successfully executed checkAuth middleware");
     next();
 });

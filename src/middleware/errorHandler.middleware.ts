@@ -84,7 +84,7 @@ const sendErrorProd = (err, req:Request, res:Response) => {
     });
 };
 
-export default (err, req: Request, res: Response, next: NextFunction) => {
+export default (err, req: Request, res: Response, _next: NextFunction) => {
     // console.log(err.stack);
 
     err.statusCode = err.statusCode || 500;
@@ -94,7 +94,7 @@ export default (err, req: Request, res: Response, next: NextFunction) => {
         sendErrorDev(err, req, res);
     } else if (config.NODE_ENV === 'production') {
         let error = { ...err };
-        error.message = err.message;
+                             error.message = err.message;
 
         if (error.name === 'CastError') error = handleCastErrorDB(error);
         if (error.code === 11000) error = handleDuplicateFieldsDB(error);
