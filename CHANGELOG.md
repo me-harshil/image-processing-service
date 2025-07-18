@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/me-harshil/image-processing-service/compare/v1.3.0...v1.4.0) (2025-07-18)
+
+
+### Features
+
+* add refresh token functionality and improve token verification process ([7b43c45](https://github.com/me-harshil/image-processing-service/commit/7b43c4525b9e73b19b0a5a2741380e633b60ee46))
+
 # [1.3.0](https://github.com/me-harshil/image-processing-service/compare/v1.2.0...v1.3.0) (2025-07-18)
 
 
