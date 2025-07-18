@@ -9,14 +9,14 @@ import { promisify } from "util";
 
 const checkAuth = catchAsync(async (req: Request, _res: Response, next: NextFunction) => {
     logger.info("Started executing checkAuth middleware");
-    let token;
+    let token:string | undefined;
     if (
         req.headers.authorization &&
         req.headers.authorization.startsWith('Bearer')
     ) {
         token = req.headers.authorization.split(' ')[1];
-    } else if (req.cookies?.jwt) {
-        token = req.cookies.jwt;
+    } else if (req.cookies?.accessToken) {
+        token = req.cookies.accessToken;
     }
 
     if (!token) {
@@ -25,13 +25,13 @@ const checkAuth = catchAsync(async (req: Request, _res: Response, next: NextFunc
     }
 
     const verifyAsync = promisify(jwt.verify) as (token: string, secret: string) => Promise<any>;
-    const decoded = await verifyAsync(token, config.JWT_SECRET_KEY);
+    const decoded = await verifyAsync(token, config.ACCESS_TOKEN_SECRET);
     const currentUser = await User.findById(decoded.id);
     if (!currentUser) {
-        logger.error("The user belodsfnging to this token does no longer exist");
+        logger.error("The user belonging to this token does no longer exist");
         return next(new AppError("The user belonging to this token does no longer exist.", 401));
     }
-    // req.user = currentUser;
+    req.user = currentUser;
     logger.info("Successfully executed checkAuth middleware");
     next();
 });

@@ -1,7 +1,5 @@
 import User from "@/models/user.model";
 import AppError from "@/utils/appError";
-import jwt, { SignOptions } from "jsonwebtoken";
-import config from "@/config/config";
 
 type User = { username: string, password: string };
 
@@ -16,15 +14,20 @@ const loginService = async ({ username, password }: User) => {
         throw new AppError("username or password is incorrect", 401);
     }
 
-    const token = jwt.sign({ id: user.id }, config.JWT_SECRET_KEY, { expiresIn: config.JWT_EXPIRES_IN } as SignOptions);
+    const accessToken = user.generateAccessToken();
+    const refreshToken = user.generateRefreshToken();
+
+
+    user.refreshToken = refreshToken;
+    await user.save({ validateBeforeSave: false });
+
     user.password = undefined;
+    user.refreshToken = undefined;
+
     return {
-        status: "success",
-        message: "Login successful",
-        token,
-        data: {
-            user,
-        }
+        user,
+        accessToken,
+        refreshToken
     }
 }
 
