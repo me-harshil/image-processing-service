@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/me-harshil/image-processing-service/compare/v1.2.0...v1.3.0) (2025-07-18)
+
+
+### Bug Fixes
+
+* correct refreshToken removal in logoutController ([aa5ac09](https://github.com/me-harshil/image-processing-service/commit/aa5ac09694880d9d310fdc24ecf599905cd06246))
+
+
+### Features
+
+* implement logout functionality and enhance authentication flow with access and refresh tokens ([3c47124](https://github.com/me-harshil/image-processing-service/commit/3c4712480a3f60f6f13d8578d772ca409161fd21))
+
 # [1.2.0](https://github.com/me-harshil/image-processing-service/compare/v1.1.0...v1.2.0) (2025-07-17)
 
 
