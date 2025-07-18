@@ -29,13 +29,18 @@ const uploadFileToAws = async (fileName: string, filePath: string) => {
         })
 
         const data = await s3Client.send(command);
-        console.log(data)
         logger.info("Image uploaded to AWS S3 successfully");
+        // Generate a signed URL for the file
+        // const url = await getFileUrlFromAws(fileName);
+
+        // Construct url - This works because the bucket is public
+        const url = `https://${process.env.AWS_BUCKET_NAME}.s3.amazonaws.com/${fileName}`
 
         fs.unlinkSync(filePath);
         logger.info("File deleted from local filesystem");
-        return data;
+        return { message: "Image uploaded to AWS S3 successfully", status: "success", url };
     } catch (err) {
+        fs.unlinkSync(filePath);
         logger.error("Error uploading image to AWS S3", err);
         return 'error';
     }
@@ -44,13 +49,14 @@ const uploadFileToAws = async (fileName: string, filePath: string) => {
 const getFileUrlFromAws = async (fileName: string, expireTime = null) => {
     try {
         // Check if the file is available in the AWS S3 bucket
-        const check = await this.isFileAvailableInAwsBucket(fileName);
+        // const check = await isFileAvailableInAwsBucket(fileName);
+        const check = true
 
         if (check) {
             // Create a GetObjectCommand to retrieve the file from S3
             const command = new GetObjectCommand({
-                Bucket: process.env.AWS_BUCKET_NAME, // Specify the AWS S3 bucket name
-                Key: fileName, // Specify the file name
+                Bucket: process.env.AWS_BUCKET_NAME,
+                Key: fileName,
             });
 
             // Generate a signed URL with expiration time if provided
