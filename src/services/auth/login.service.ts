@@ -17,7 +17,6 @@ const loginService = async ({ username, password }: User) => {
     const accessToken = user.generateAccessToken();
     const refreshToken = user.generateRefreshToken();
 
-
     user.refreshToken = refreshToken;
     await user.save({ validateBeforeSave: false });
 
