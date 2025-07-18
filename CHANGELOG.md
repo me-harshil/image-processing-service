@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/me-harshil/image-processing-service/compare/v1.4.0...v1.5.0) (2025-07-18)
+
+
+### Features
+
+* enhance image upload functionality with AWS S3 integration and improve error handling ([5f35c89](https://github.com/me-harshil/image-processing-service/commit/5f35c89248841d4ed6435f17a84cc4f531ea1a20))
+
 # [1.4.0](https://github.com/me-harshil/image-processing-service/compare/v1.3.0...v1.4.0) (2025-07-18)
 
 
