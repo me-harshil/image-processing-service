@@ -5,7 +5,11 @@ import User from "@/models/user.model";
 
 const logoutController = catchAsync(async (req, res, next) => {
     logger.info("Started executing logoutController");
-    await User.findByIdAndUpdate({ req.user.id }, { $set: { refeshToken: undefined } }, { new: true });
+    await User.findByIdAndUpdate(req.user.id, {
+        $unset: {
+            refreshToken: 1 // This removes the field from the document
+        }
+    }, { new: true });
     const cookieOptions = {
         httpOnly: true,
         secure: true
