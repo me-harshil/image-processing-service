@@ -102,18 +102,18 @@ const isFileAvailableInAwsBucket = async (fileName: string) => {
 
 const deleteFileFromAws = async (fileName: string) => {
     try {
-        // Configure the parameters for the S3 upload
-        const uploadParams = {
+        // Configure the parameters for the S3 DeleteObjectCommand
+        const params = {
             Bucket: process.env.AWS_BUCKET_NAME,
             Key: fileName,
         };
-        // Upload the file to S3
-        await s3Client.send(new DeleteObjectCommand(uploadParams)).then((data) => {
-        });
-
+        // A DeleteObjectCommand to delete the file from S3
+        await s3Client.send(new DeleteObjectCommand(params));
+        logger.info("File deleted from AWS S3 successfully");
+        return { message: "File deleted from AWS S3 successfully", status: "success" };
     } catch (err) {
-        console.error('Error ', err);
-        return 'error';
+        logger.error("Error deleting file from AWS S3", err);
+        return new AppError('Error deleting file from AWS S3', 500);
     }
 };
 
